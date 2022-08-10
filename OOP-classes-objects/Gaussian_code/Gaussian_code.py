@@ -1,7 +1,8 @@
 import math
 import matplotlib.pyplot as plt
+from .Generaldistribution import  Distribution
 
-class Gaussian():
+class Gaussian(Distribution):
     """ Gaussian distribution class for calculating and 
     visualizing a Gaussian distribution.
     
@@ -12,9 +13,7 @@ class Gaussian():
             
     """
     def __init__(self, mu = 0, sigma = 1):
-        self.mean = mu
-        self.stdev = sigma
-        self.data = []
+        Distribution.__init__(self, mu, sigma)
 
     def calculate_mean(self):
         """Function to calculate the mean of the data set.
